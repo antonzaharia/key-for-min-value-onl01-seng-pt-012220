@@ -19,7 +19,11 @@ def key_for_min_value(name_hash)
   if array[2] < array[1] && array[2] < array[0]
   result << array[2]
   end
-  
-  name_hash[result]
+  result
+  name_hash.collect do |keys,value|
+  if value == result[0]
+  return keys
+  end
+  end
 end
 end
