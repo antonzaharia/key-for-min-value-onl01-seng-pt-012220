@@ -19,6 +19,7 @@ def key_for_min_value(name_hash)
   if array[2] < array[1] && array[2] < array[0]
   result << array[2]
   end
-  result
+  
+  name_hash[result]
 end
 end
